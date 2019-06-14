@@ -30,13 +30,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference between `.forEach` and `.map` is that `.forEach` returns the same array while `.map` creates a new array.
+
 2. What is the difference between a function and a method?
+
+A method is a specific type of function that can be called or created on objects (arrays too because they are technically objects).
 
 3. What is closure?
 
+Closure has to do with declaring variables in the global scope vs the local scope (function scope and block scope).
+
 4. Describe the four rules of the 'this' keyword.
 
+Window Binding: `this` refers to the window. i.e. it refers to the object where all of JavaScript is contained
+Implicit Binding: `this` refers to the object before the '.'
+New Binding: `this` refers to the object that is returned by a constructor function
+Explicit Binding: `this` refers to the object that is being used by the 'apply' or 'call' methods
+
 5. Why do we need super() in an extended class?
+
+We need `super()` in an extended class (child class) to allow the child class to communicate with the parent class after inheriting.
 
 ## Project Set up
 
@@ -65,11 +78,11 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
+Test your knowledge of objects and arrays.
 * [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
+This challenge takes a look at callbacks and closures as well as scope.
 * [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
