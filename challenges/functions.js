@@ -37,7 +37,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: because they are both children of `myFunction()`
+// Explanation: because they are both children of `myFunction()`. if you look below, you'll see that `test2()` doesnt work because it is not a child of `myFunction()`
 
 
 const external = "I'm outside the function";
