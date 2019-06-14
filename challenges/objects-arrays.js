@@ -103,7 +103,7 @@ const uni = [];
 //   }
 // });
 
-for(let i = 0; i < graduates.length; i++){
+for(let i = 0; i < graduates.length; i++) {
   if(graduates[i].university.includes('Uni')) {
     uni.push(graduates[i].university);
   }
@@ -133,6 +133,14 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+// for(let i = 0; i < zooAnimals.length; i++) {
+//   animalNames.push(`Name: ${zooAnimals[i].animal_name}, Scientific: ${zooAnimals[i].scientific_name}.`);
+// }
+
+zooAnimals.forEach(item => {
+  animalNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}.`);
+});
+
 console.log(animalNames);
 
 /* Request 2: .map()
@@ -142,6 +150,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+zooAnimals.map((whatever) => {
+  lowerCase.push(whatever.animal_name.toLowerCase());
+});
 console.log(lowerCase);
 
 /* Request 3: .filter()
@@ -150,6 +161,11 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = [];
+zooAnimals.filter((whatever) => {
+  if(whatever.population < 5) {
+    lowerPopulation.push(whatever.animal_name);
+  }
+});
 console.log(lowerPopulation);
 
 /* Request 4: .reduce()
@@ -157,9 +173,11 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
-console.log(populationTotal);
+const populationTotal = zooAnimals.reduce((total, whatever) => {
+  return total += whatever.population;
+}, 0);
 
+console.log(populationTotal);
 
 /*
 
